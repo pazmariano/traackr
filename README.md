@@ -12,4 +12,4 @@ Feel free to open an issue if you have questions or want to chat about anything 
 # FlaskHello
 FlaskHello is a HelloWord kind of containerized webapp running Python's Flask webapp framework.
 
-[Go to FlaskHello](./flaskhello/README.md)
+[Go to FlaskHello](./flaskhello/flaskhello.md)
