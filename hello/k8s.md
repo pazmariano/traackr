@@ -4,7 +4,8 @@ This article explains how to use Flask Hello image and run the app inside Kubern
 
 ## Step by Step
 
-First of all you have to start your Kubernetes cluster
+First of all you have to start your Kubernetes cluster.
+This deployment uses Traefik as Load Balancer. [Read more.](https://doc.traefik.io/traefik/v1.7/user-guide/kubernetes/)
 
 ```bash
 minikube start
@@ -25,7 +26,26 @@ minikube start
 ##🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 ```
 
+## Enable add-on for Ingress
+```bash
+minikube addons enable ingress
+```
 
+## Add required repo to use Traefik Helm Chart and install it
+```bash
+helm repo add traefik https://helm.traefik.io/traefik
+helm install my-traefik traefik/traefik --version 9.10.1
+## Enable ingress add-on
+minikube addons enable ingress
+## Enable RBAC for Traefik in case you are running K8s +1.16
+kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v1.7/examples/k8s/traefik-rbac.yaml
+## Deploy Traefik using Deployment object
+kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v1.7/examples/k8s/traefik-deployment.yaml
+## Submit the Ingress to the cluster
+kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v1.7/examples/k8s/ui.yaml
+## 
+
+```
 
 --
 

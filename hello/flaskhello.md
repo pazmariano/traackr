@@ -10,6 +10,7 @@ In order to do it, you will have to have the following dependencies installed:
 * Docker -> Used to build, run and share your containers. [Read More](https://docs.docker.com/get-docker/)
 * minikube -> Used run your local Kubernetes service. [Read More](https://minikube.sigs.k8s.io/docs/start/)
 * kubectl -> Used administer your local Kubernetes service. [Read More](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* helm -> Package manager for Kubernetes. [Read More](https://helm.sh/docs/intro/quickstart/)
 
 ## HOW TOs
 * [Build Image](build.md)
