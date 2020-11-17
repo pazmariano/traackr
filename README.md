@@ -64,3 +64,7 @@ export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpat
 kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT &&
 curl 127.0.0.1:8080
 ```
+
+#### Using startup script
+This repository includes an startup.sh script that does the start and install of the helm but it doesn't export the required variables.
+You can run the script that will start minikube cluster and install the helm chart. Follow the instructions printed at the end in order to make the app work as needed.
