@@ -1,6 +1,7 @@
 ## Traackr DevOps Technical Project
 
 This is my solution to the challenge provided by Traackr.
+Total time from 0 to Done: 12 hours.
 
 ## Pre-Requisites
 In order to use this solution, you will have to have the following pre-requisites installed and working on your machine:
